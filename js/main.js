@@ -62,18 +62,20 @@ window.onload = function(){
             msgsec.appendChild(bot);
 
         }
+        //maths operations
         else if(umsg.match(/[0-9]/g)){
             let bot=document.createElement("P");
             bot.innerHTML= "Answer is "+eval(umsg);
             bot.classList.add('bottext', 'animate__animated','animate__fadeInDown')
             msgsec.appendChild(bot);     
         }
-        else if(umsg.match(/who is/i) || umsg.match(/what is/i)){
-            let bot=document.createElement("P");
-            bot.innerHTML= 
-            bot.classList.add('bottext', 'animate__animated','animate__fadeInDown')
-            msgsec.appendChild(bot);     
-        }
+
+        // else if(umsg.match(/who is/i) || umsg.match(/what is/i)){
+        //     let bot=document.createElement("P");
+        //     bot.innerHTML= 
+        //     bot.classList.add('bottext', 'animate__animated','animate__fadeInDown')
+        //     msgsec.appendChild(bot);     
+        // }
         else if(umsg.match(/time/i) || umsg.match(/Time/i)){
             let bot=document.createElement("P");
             bot.innerHTML=date.toLocaleTimeString();
